@@ -13,7 +13,7 @@ for i in libs:
 print("Все библиотеки установлены. Проверяю конфиг...")
 
 with open('config.py', 'r+') as f:
-    if f.read().len() < 10:
+    if len(f.read()) < 10:
         print('Конфиг пуст...')
         f.write(f'TOKEN=\"{input("Введите токен бота: ")}\"\nMAIN=\"{input("Введите ID основного канала: ")}\"\nAPI=\"{input("Введите CryptoBot API: ")}\"')
     else:
